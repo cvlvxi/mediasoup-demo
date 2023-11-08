@@ -4,3 +4,6 @@
 [submodule "mediasoup"]
 	path = mediasoup
 	url = git@github.com:cvlvxi/mediasoup.git
+[submodule "mediasoup-client"]
+	path = mediasoup-client
+	url = git@github.com:cvlvxi/mediasoup-client.git

@@ -5368,9 +5368,8 @@ md5.js@^1.3.4:
     inherits "^2.0.1"
     safe-buffer "^5.1.2"
 
-"mediasoup-client@github:versatica/mediasoup-client#v3":
+"mediasoup-client@file:../mediasoup-client":
   version "3.6.103"
-  resolved "https://codeload.github.com/versatica/mediasoup-client/tar.gz/f6060983c4f8fde4647567735baacc4029733151"
   dependencies:
     "@types/debug" "^4.1.10"
     awaitqueue "^3.0.2"
