@@ -23,7 +23,7 @@
   "dependencies": {
     "debug": "^4.1.1",
     "fake-mediastreamtrack": "^1.1.3",
-    "mediasoup-client-aiortc": "github:versatica/mediasoup-client-aiortc#v3",
+    "mediasoup-client-aiortc": "file:../mediasoup-client-aiortc",
     "protoo-client": "^4.0.3",
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",

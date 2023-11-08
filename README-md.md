@@ -4,10 +4,17 @@
 git submodule update --recursive --init
 ```
 
-# Node 16
+# Node 18
 
 ```
 nodenv local 18.3.0
+```
+
+# Build mediasoup
+
+```
+cd mediasoup;
+yarn;
 ```
 
 # Self Signing
