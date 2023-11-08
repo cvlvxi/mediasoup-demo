@@ -1,0 +1,6 @@
+[submodule "mediasoup-client-aiortc"]
+	path = mediasoup-client-aiortc
+	url = git@github.com:cvlvxi/mediasoup-client-aiortc.git
+[submodule "mediasoup"]
+	path = mediasoup
+	url = git@github.com:cvlvxi/mediasoup.git

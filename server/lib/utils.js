@@ -14,10 +14,10 @@ exports.clone = function(value)
 	else if (typeof structuredClone === 'function')
 	{
 		// Available in Node >= 18.
-		return structuredClone(value);
+		return JSON.parse(JSON.stringify(value));
 	}
 	else
 	{
 		return JSON.parse(JSON.stringify(value));
 	}
-}
+};
