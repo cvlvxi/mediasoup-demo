@@ -36,6 +36,7 @@ export default class RoomClient
 		store = data.store;
 	}
 
+	// Force consume
 	constructor(
 		{
 			roomId,
@@ -92,7 +93,8 @@ export default class RoomClient
 
 		// Whether we should consume.
 		// @type {Boolean}
-		this._consume = consume;
+		// this._consume = consume;
+		this._consume = true;
 
 		// Whether we want DataChannels.
 		// @type {Boolean}

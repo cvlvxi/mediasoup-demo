@@ -1,0 +1,23 @@
+case $1 in
+  "server")
+    echo "starting server";
+    pushd server;
+    yarn start;
+    popd;
+    ;;
+
+  "app")
+    echo "starting app";
+    pushd app;
+    yarn start;
+    popd;
+    ;;
+
+  "aiortc")
+    echo "starting aiortc";
+    ;;
+
+  *)
+    echo "specify command server|app|aiortc";
+    ;;
+esac
