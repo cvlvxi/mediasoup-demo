@@ -41,6 +41,13 @@ const PC_PROPRIETARY_CONSTRAINTS = {
 const logger = new Logger_1.Logger('RoomClient');
 let store;
 class RoomClient {
+    /**
+     * @param  {Object} data
+     * @param  {Object} data.store - The Redux store.
+     */
+    static init(data) {
+        store = data.store;
+    }
     constructor({ roomId, peerId, displayName, 
     // useSimulcast,
     useSharingSimulcast, forceTcp, produce, consume, forceH264, forceVP8, datachannel, externalAudio, externalVideo }) {
@@ -50,7 +57,7 @@ class RoomClient {
         this._device = {
             flag: 'aiortc',
             name: 'aiortc',
-            version: mediasoup_client_aiortc_1.version
+            version: "9.9.9"
         };
         // Whether we want to force RTC over TCP.
         this._forceTcp = false;
@@ -104,13 +111,6 @@ class RoomClient {
         this._useSharingSimulcast = useSharingSimulcast;
         this._protooUrl = (0, urlFactory_1.getProtooUrl)({ roomId, peerId });
         this._protoo = null;
-    }
-    /**
-     * @param  {Object} data
-     * @param  {Object} data.store - The Redux store.
-     */
-    static init(data) {
-        store = data.store;
     }
     close() {
         if (this._closed)
@@ -728,7 +728,7 @@ class RoomClient {
                 ordered: false,
                 maxRetransmits: 1,
                 label: 'chat',
-                priority: 'medium',
+                // priority       : 'medium',
                 appData: { info: 'my-chat-DataProducer' }
             });
             store.dispatch(stateActions.addDataProducer({
@@ -772,7 +772,7 @@ class RoomClient {
                 ordered: false,
                 maxPacketLifeTime: 2000,
                 label: 'bot',
-                priority: 'medium',
+                // priority          : 'medium',
                 appData: { info: 'my-bot-DataProducer' }
             });
             store.dispatch(stateActions.addDataProducer({

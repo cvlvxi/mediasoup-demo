@@ -1,4 +1,4 @@
-declare type InitialState = {
+type InitialState = {
     url: string | null;
     state: 'new' | 'connecting' | 'connected' | 'disconnected' | 'closed';
     activeSpeakerId: string | null;

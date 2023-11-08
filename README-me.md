@@ -21,6 +21,12 @@ pushd mediasoup-client;
 yarn;
 yarn typescript:build;
 popd;
+
+pushd mediasoup-client-aiortc;
+pip install worker/
+yarn;
+yarn typescript:build;
+popd;
 ```
 
 # Self Signing Server
@@ -52,6 +58,7 @@ yarn;
 ```
 cd aiortc
 yarn;
+yarn typescript:build;
 ```
 
 

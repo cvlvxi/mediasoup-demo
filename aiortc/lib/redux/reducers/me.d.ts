@@ -1,4 +1,4 @@
-declare type InitialState = {
+type InitialState = {
     id: string | null;
     displayName: string | null;
     displayNameSet: boolean;

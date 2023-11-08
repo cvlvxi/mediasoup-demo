@@ -2,7 +2,6 @@
 import protooClient from 'protoo-client';
 import * as mediasoupClient from 'mediasoup-client';
 import {
-	version,
 	createWorker,
 	Worker,
 	WorkerLogLevel
@@ -35,7 +34,7 @@ export class RoomClient
 	_device: any = {
 		flag : 'aiortc',
 		name : 'aiortc',
-		version
+		version : "9.9.9"
 	};
 
 	// Whether we want to force RTC over TCP.
@@ -555,7 +554,7 @@ export class RoomClient
 					const { peerId } = consumer.appData;
 
 					store.dispatch(
-						stateActions.removeConsumer(consumerId, peerId));
+						stateActions.removeConsumer(consumerId, peerId as string));
 
 					break;
 				}
@@ -626,7 +625,7 @@ export class RoomClient
 					const { peerId } = dataConsumer.appData;
 
 					store.dispatch(
-						stateActions.removeDataConsumer(dataConsumerId, peerId));
+						stateActions.removeDataConsumer(dataConsumerId, peerId as string));
 
 					break;
 				}
@@ -1194,7 +1193,7 @@ export class RoomClient
 					ordered        : false,
 					maxRetransmits : 1,
 					label          : 'chat',
-					priority       : 'medium',
+					// priority       : 'medium',
 					appData        : { info: 'my-chat-DataProducer' }
 				});
 
@@ -1260,7 +1259,7 @@ export class RoomClient
 					ordered           : false,
 					maxPacketLifeTime : 2000,
 					label             : 'bot',
-					priority          : 'medium',
+					// priority          : 'medium',
 					appData           : { info: 'my-bot-DataProducer' }
 				});
 
@@ -1647,7 +1646,7 @@ export class RoomClient
 						}
 						catch (error)
 						{
-							errback(error);
+							errback(error as Error);
 						}
 					});
 
@@ -1683,7 +1682,7 @@ export class RoomClient
 					}
 					catch (error)
 					{
-						errback(error);
+						errback(error as Error);
 					}
 				});
 			}
